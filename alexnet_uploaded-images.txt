@@ -1,0 +1,79 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                  Banana_01.jpg  label:                     banana
+ 2 key:                     Cat_01.jpg  label:                        cat
+ 3 key:                  Beagle_02.jpg  label:                     beagle
+ 4 key:                  Beagle_01.jpg  label:                     beagle
+
+     MATCH:
+
+                 Banana_01.jpg: 
+Real:                     banana   Classifier:                         banana
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:                 tiger cat, cat
+
+ NOT A MATCH:
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:               english foxhound
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:               english foxhound
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                 Banana_01.jpg: 
+Real:                     banana   Classifier:                         banana  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:                 tiger cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:               english foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:               english foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+Banana_01.jpg : ['banana', 'banana', 1, 0, 0]
+Cat_01.jpg : ['cat', 'tiger cat, cat', 1, 0, 0]
+Beagle_02.jpg : ['beagle', 'english foxhound', 0, 1, 1]
+Beagle_01.jpg : ['beagle', 'english foxhound', 0, 1, 1]
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not_Dog Images    :   2
+pct_match is 50.0%
+pct_correct_dogs is 100.0%
+pct_correct_breed is 0.0%
+pct_correct_notdogs is 100.0%
+
+INCORRECT Dog Breed Assignment:
+Real:                     beagle   Classifier:               english foxhound
+Real:                     beagle   Classifier:               english foxhound
+
+** Total Elapsed Runtime: 0:0:0
